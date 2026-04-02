@@ -28,7 +28,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # API Base URL
-API_URL = "http://localhost:8000/api"
+API_URL = "https://scalable-url-shortener-i6rt.onrender.com/"
 
 st.title("🔗 URL Shortener")
 st.markdown("Transform long URLs into short, shareable links with click tracking")
