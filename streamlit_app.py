@@ -28,7 +28,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # API Base URL
-API_URL = "https://scalable-url-shortener-i6rt.onrender.com/"
+API_URL = "https://scalable-url-shortener-i6rt.onrender.com"
 
 st.title("🔗 URL Shortener")
 st.markdown("Transform long URLs into short, shareable links with click tracking")
@@ -68,7 +68,7 @@ with tab1:
                 if response.status_code == 201:
                     data = response.json()
                     short_code = data["short_code"]
-                    short_url = f"http://localhost:8000/api/{short_code}"
+                    short_url = f"https://scalable-url-shortener-i6rt.onrender.com/api/{short_code}"
                     
                     st.success("✅ URL shortened successfully!")
                     
@@ -161,7 +161,7 @@ with tab2:
                     
                     # QR Code for stats
                     st.markdown("### QR Code")
-                    short_url = f"http://localhost:8000/api/{data['short_code']}"
+                    short_url = f"https://scalable-url-shortener-i6rt.onrender.com/api/{data['short_code']}"
                     qr = qrcode.QRCode(version=1, box_size=10, border=4)
                     qr.add_data(short_url)
                     qr.make(fit=True)
