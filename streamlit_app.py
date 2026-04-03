@@ -62,7 +62,7 @@ with tab1:
                 response = requests.post(
                     f"{API_URL}/shorten",
                     json={"original_url": original_url},
-                    timeout=5
+                    timeout=30
                 )
                 
                 if response.status_code == 201:
