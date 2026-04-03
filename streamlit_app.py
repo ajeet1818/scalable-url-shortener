@@ -68,7 +68,7 @@ with tab1:
                 if response.status_code == 201:
                     data = response.json()
                     short_code = data["short_code"]
-                    short_url = f"https://scalable-url-shortener-i6rt.onrender.com/api/{short_code}"
+                    short_url = f"https://scalable-url-shortener-i6rt.onrender.com/{short_code}"
                     
                     st.success("✅ URL shortened successfully!")
                     
