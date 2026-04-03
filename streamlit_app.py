@@ -28,7 +28,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # API Base URL
-API_URL = "https://scalable-url-shortener-i6rt.onrender.com"
+API_URL = "https://scalable-url-shortener-i6rt.onrender.com/api"
 
 st.title("🔗 URL Shortener")
 st.markdown("Transform long URLs into short, shareable links with click tracking")
@@ -68,7 +68,7 @@ with tab1:
                 if response.status_code == 201:
                     data = response.json()
                     short_code = data["short_code"]
-                    short_url = f"https://scalable-url-shortener-i6rt.onrender.com/{short_code}"
+                    short_url = f"https://scalable-url-shortener-i6rt.onrender.com/api/{short_code}"
                     
                     st.success("✅ URL shortened successfully!")
                     
